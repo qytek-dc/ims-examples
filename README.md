@@ -1,11 +1,24 @@
 # Isomet iMS Control Examples
-Set of useful getting started guides for use with the Isomet iMS Acousto-Optic Control Software Library
+A set of useful getting started guides for new users of the Isomet iMS Acousto-Optic Control Software system.
+
+iMS is a technology developed by Isomet consisting of a range of RF hardware products designed for driving Acousto-Optic devices with complex patterns or sequences of fast modulating waveforms.  A suite of software applications and APIs are made available allowing customers to integrate the RF drivers into their own systems with substantial flexibility and control.
+
+These examples demonstrate how to install the software in a development environment and introduce the new user to some key concepts when beginning the journey of developing an iMS based control system.
+
+# Contents
+* [Installing the library](#installing-the-library)
+* [Setting up the Development Environment](#setting-up-the-development-environment)
+* [Example 01: Getting Started](01-GettingStarted/README.md)
+* [Example 02: Scanning for an iMS System](02-ScanConnect/README.md)
 
 # Installing the library
 
-## Windows 10 / 11
+## Operating System Support
+These examples assume the user is familiar with software development in a Linux environment and show how to install the iMS shared library on an example 64-bit x86 platform running Ubuntu 20.04.
 
-Please download and install the SDK directly from the Isomet website: https://isomet.com/ims4_sw.html
+Windows users should download and install the SDK directly from the Isomet website: https://isomet.com/ims4_sw.html
+
+For other platforms and Operating System requirements, please contact us at isomet@isomet.co.uk
 
 ## Ubuntu 20.04 LTS (64-bit)
 
@@ -27,45 +40,20 @@ The library can be installed directly from an APT repository.  Open a terminal a
 
 `$ sudo apt install libxml2-dev libims`
 
-If all goes, the library and its supporting files should be installed to `/opt/isomet`
+If all goes well, the library and its supporting files should be installed to `/opt/isomet`
 
 # Setting up the Development Environment
 
-The examples in this repository use CMake and we recommend using Visual Studio Code to build them.  Follow these instructions to get started for your platform (https://code.visualstudio.com/docs/cpp).  Ensure the C++ extension by Microsoft is installed.
+The examples in this repository use CMake and we recommend using Visual Studio Code to build them. Download and install the Visual Studio Code Debian/Ubuntu package from here: https://code.visualstudio.com/download
 
-On Ubuntu, ensure cmake is installed:
+You will need the official Microsoft C++ extension: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
 
-`$ cmake --version`
+And the CMake and CMake Tools extensions from here: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools
 
-and install the GCC compiler:
+From a terminal, ensure that cmake and a few other build dependencies are installed:
 
-`$ sudo apt install build-essential gdb git`
+`$ sudo apt install cmake build-essential gdb git`
 
 You should now be ready to build the examples!
 
-# Building the Examples
-
-If you haven't already, download this git repository:
-
-`$ git clone https://github.com/qytek-dc/ims-examples.git`
-
-Open VS Code and open the folder where the repository was downloaded.
-
-Along the status bar at the bottom, select the variant to build (default 'Debug')
-
-![Variant](/images/getting-started-01.jpg)
-
-![Variant Type](/images/cmake-variant-type.png)
-
-Then click on Build:
-
-![Build](/images/cmake-build.png)
-
-If the build completes successfully, select the target (ims-example-01) and click Run to see the program output in the terminal window:
-
-![Run](/images/getting-started-02.png)
-
-If you see the message "This example is linked to iMS library Version: 1.8.5", you have successfully installed the iMS Control library and linked your first program to it!
-
-![Run Result](/images/getting-started-03.png)
-
+Continue to: [Example 01: Getting Started](01-GettingStarted/README.md)
