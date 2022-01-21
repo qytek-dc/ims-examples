@@ -33,7 +33,7 @@ The library can be installed directly from an APT repository.  Open a terminal a
 * Tell Apt where to find the iMS repository
 
 `$ sudo apt-add-repository "deb http://isomet-ims-lib.s3.amazonaws.com focal main"`
-* Update Apt
+* Update Apt.  You may receive an info notice saying `Skipping acquisition of configured file 'main/binary-i386/Packages ... '`.  This is because we do not currently support 32-bit targets.  It is safe to ignore this.
 
 `$ sudo apt update`
 * Install the library together with its dependency on libxml2
@@ -45,6 +45,10 @@ If all goes well, the library and its supporting files should be installed to `/
 # Setting up the Development Environment
 
 The examples in this repository use CMake and we recommend using Visual Studio Code to build them. Download and install the Visual Studio Code Debian/Ubuntu package from here: https://code.visualstudio.com/download
+
+Alternatively, it can be installed directly from the Ubuntu Software app:
+
+![VS Code in Ubuntu Software](/images/install-vscode.png)
 
 You will need the official Microsoft C++ extension: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
 

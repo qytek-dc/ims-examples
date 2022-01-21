@@ -8,7 +8,9 @@ Clone this git repository into your new directory:
 
 `$ git clone https://github.com/qytek-dc/ims-examples.git`
 
-Start VS Code and open the folder `~/ims/ims-examples`.
+Start VS Code and open the folder `~/ims/ims-examples`.  You will be prompted to choose a 'kit', in this case a compiler to build the examples with.  We will use GCC:
+
+![Choose a kit](/images/choose-a-kit.png)
 
 Along the status bar at the bottom, select the variant to build (default 'Debug')
 
@@ -22,7 +24,7 @@ Then click on Build:
 
 ![Build](/images/cmake-build.png)
 
-If the build completes successfully, select the target [ims-example-01] in the status bar and click Run to see the program output in the terminal window:
+If the build completes successfully, change the target in the status bar from [all] to [ims-example-01] and click Run to see the program output in the terminal window:
 
 ![Run](/images/getting-started-02.png)
 

@@ -2,7 +2,7 @@
 #include <ims/LibVersion.h>
 #include <iostream>
 
-// A single reference to the connection between our application and the hardware
+// A single reference to the connection wrapper between our application and the hardware
 IMSConnection conn;
 
 // This becomes a pointer to the ims hardware which we can use to interact with it
