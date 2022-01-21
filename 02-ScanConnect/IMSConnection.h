@@ -23,7 +23,4 @@ private:
 std::unique_ptr < iMS::ConnectionList > IMSConnection::_imsconn = std::make_unique < iMS::ConnectionList> ();
 std::vector < iMS::IMSSystem > IMSConnection::fullList = std::vector < iMS::IMSSystem > ();
 
-// This becomes a handle for all of the communications between our application and the hardware
-extern IMSConnection conn;
-
 #endif
